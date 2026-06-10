@@ -83,3 +83,18 @@ To enable AutoBaud, configure the USB CDC port to the following custom baud rate
 
 Changing the baud rate to any other value disables AutoBaud.
 
+## Debugprobe Pinout
+
+The Debug Probe pinout is as follows:
+
+```
+Pico A (Debugger) -> Pico B (System Under Test)
+
+Pico A GND -> Pico B GND
+Pico A GP2 -> Pico B SWCLK
+Pico A GP3 -> Pico B SWDIO
+Pico A GP4/UART1 TX -> Pico B GP1/UART0 RX
+Pico A GP5/UART1 RX -> Pico B GP0/UART0 TX
+```
+
+More details can be found in Appendix A of the [Raspberry Pi Pico Getting Started Guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
